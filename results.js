@@ -22,16 +22,16 @@ loadPage();
 // this tells the website to find the winning prize imagine and prompt the user to download if they hit the download button
 download_el.addEventListener("click", () => {
     const link = document.createElement('a')
-    link.href = `Assets/prize_imgs/prize${result}.jpeg` // this is where you can change the file type of the prize to something besides .jpeg
-    link.download = `claw-machine-prize.jpeg`
+    link.href = `Assets/prize_imgs/prize${result}.png` // Changed to .png - make sure your prize images match this format
+    link.download = `lucky-envelope-prize.png`
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
 })
 
-// this tells the website to go back to the game page if the user hits the play again button
+// Updated to use index.html instead of game.html
 playAgain_el.addEventListener("click", ()=> {
-    window.location.replace("game.html");
+    window.location.replace("index.html");
     window_el.style.opacity = "0"
     window_el.style.transform = "translateY(10px)"
     download_el.style.opacity = "0"
